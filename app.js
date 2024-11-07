@@ -1,12 +1,12 @@
-//引入express中间件
+﻿// 引入express中间件
 var express = require('express');
 var app = express();
 
-//指定启动服务器到哪个文件夹，我这边指的是dist文件夹
+// 设置静态文件目录为dist文件夹
 app.use(express.static('src'));
 
-//监听端口为3000
-var server = app.listen(3000, function () {
+// 启动服务，监听3000端口
+var server = app.listen(6868, '0.0.0.0', function () {
     var host = server.address().address;
     var port = server.address().port;
 
